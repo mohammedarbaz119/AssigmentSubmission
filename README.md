@@ -79,17 +79,17 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
 
 ### For NPM Users
 
-1. **Install dependencies**:
+1.  **Install dependencies**:
 ```bash
 npm install
 ```
 
-2.**run tsc**
+2.  **run tsc**
 ```bash
 tsc
 ```
 
-3.**run the Javascript file**
+3.  **run the Javascript file**
 ```bash
 node dist/index.js
 ```
