@@ -76,7 +76,7 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
    pnpm run dev
    ```
 
-5. **Access the app**: The app will be running on `http://localhost:3000`.
+5. **Access the app**: The app will be running on `http://localhost:4000`.
 
 ### Production Setup
 
