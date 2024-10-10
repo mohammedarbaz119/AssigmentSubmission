@@ -48,6 +48,7 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
 - **Node.js** (version 14.x or later)
 - **MongoDB** (local or cloud instance)
 - **pnpm**: Package manager
+- **for npm users**: steps below
 
 ### Steps to Run Locally
 
@@ -75,6 +76,25 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
    ```bash
    pnpm run dev
    ```
+
+### For NPM Users
+
+1. **Install dependencies**:
+```bash
+npm install
+```
+
+2.**run tsc**
+```bash
+tsc
+```
+
+3.**run the Javascript file**
+```bash
+node dist/index.js
+```
+
+
 
 5. **Access the app**: The app will be running on `http://localhost:4000`.
 
