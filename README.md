@@ -1,6 +1,3 @@
-Here’s the corrected markdown file with the setup section also properly formatted:
-
-```markdown
 # Assignment Submission App
 
 ## Project Overview
@@ -112,5 +109,5 @@ The app uses **JWT tokens** for authentication:
 The project uses **Zod** for schema validation to ensure the correctness of incoming data:
 - Zod is used to validate request payloads for user registration, assignment uploads, and admin actions.
 - This ensures that only valid data is processed by the server, reducing the risk of errors and vulnerabilities.
-```
+
 
