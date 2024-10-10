@@ -54,8 +54,8 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-repo/assignment-submission-app.git
-   cd assignment-submission-app
+   git clone https://github.com/mohammedarbaz119/AssigmentSubmission
+   cd AssignmentSubmission
    ```
 
 2. **Install dependencies**:
