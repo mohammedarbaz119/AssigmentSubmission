@@ -77,6 +77,9 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
    pnpm run dev
    ```
 
+5. **Access the app**: The app will be running on `http://localhost:4000`.
+
+
 ### For NPM Users
 
 1.  **Install dependencies**:
@@ -94,9 +97,8 @@ tsc
 node dist/index.js
 ```
 
+4. **Access the app**: The app will be running on `http://localhost:4000`.
 
-
-5. **Access the app**: The app will be running on `http://localhost:4000`.
 
 ### Production Setup
 
