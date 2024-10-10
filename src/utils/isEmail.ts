@@ -9,6 +9,7 @@ const isEmail = (input:string) => {
 
   // Middleware to check if user/Admin has entered a email or username for the purpose of login 
    const validateUsernameOrEmail = (req:any, res:Response, next:NextFunction):void => {
+    
     const { usernameOrEmail } = req.body;
   
     if (!usernameOrEmail) {

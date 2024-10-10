@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import validateUsernameOrEmail from './utils/isEmail.js';
 
 // this file is for the schemas for valdating User inputs
 
@@ -18,4 +19,9 @@ export const UserAdminRegistrationSchema = z.object({
 export const AssignmentZodSchema = z.object({
     task:z.string(),
     admin:z.string()
+}).strict()
+
+export const LoginSchema = z.object({
+    usernameOrEmail:z.string(),
+    password:z.string(),
 }).strict()
