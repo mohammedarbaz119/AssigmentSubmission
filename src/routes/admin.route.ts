@@ -1,4 +1,4 @@
-
+//Admin Routes 
 import {Router} from 'express';
 import {
   registerAdmin,
@@ -11,6 +11,7 @@ import {
 import validateUsernameOrEmail from '../utils/isEmail.js';
 import { AdminAuth } from '../utils/ValidateToken.js';
 
+
 const AdminRouter = Router();
 
 
@@ -19,6 +20,8 @@ AdminRouter.post('/register',registerAdmin);
 
 AdminRouter.post('/login',validateUsernameOrEmail, loginAdmin);
 
+
+//All the Below routes need Auth
 AdminRouter.post("/logout",AdminAuth,Adminlogout)
 
 AdminRouter.get('/assignments', AdminAuth,viewAssignments);

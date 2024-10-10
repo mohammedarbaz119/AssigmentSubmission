@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { TokenPayload } from "./GenerateToken.js";
+
+// Middleware Function for verifying user tokens and Authenticatiion 
 export const UserAuth = (req: any, res: Response, next: NextFunction) => {
  
   try {
@@ -20,6 +22,7 @@ export const UserAuth = (req: any, res: Response, next: NextFunction) => {
     }
 }
 
+// Middleware Function for verifying Admin tokens and Authenticatiion of Admins  
 export const AdminAuth = (req: any, res: Response, next: NextFunction) => {
   const token = req.cookies.token;
   if (!token) {

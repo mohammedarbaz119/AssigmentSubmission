@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+//Controller file for the User Routes
 import { Request, Response } from 'express';
 import { AssignmentZodSchema, UserAdminRegistrationSchema } from '../ValidationSchemas.js';
 import User from '../models/user.model.js';
@@ -9,7 +9,13 @@ import Admin from '../models/admin.model.js';
 import Assignment from '../models/Assigment.model.js';
 import mongoose, { ObjectId } from 'mongoose';
 
-export  const age = 1000*60*60*24*7;
+export const age = 1000*60*60*24*7;
+
+/**
+ * Registers a new user in the system.
+ * Validates registration data, hashes the password, and saves the new user to the database.
+ * Responds with success or appropriate error messages.
+ */
 export const registerUser = async (req: Request, res: Response): Promise<void> => {
   try {
     const validatedData = UserAdminRegistrationSchema.parse(req.body);
@@ -38,9 +44,13 @@ export const registerUser = async (req: Request, res: Response): Promise<void> =
     console.log(error)
     res.status(500).json({ message: 'Internal server error' });
   }
-
 };
 
+/**
+ * Authenticates a user and creates a session.
+ * Finds the user, validates credentials, generates a JWT token, and sets it as an HTTP-only cookie.
+ * Responds with user data or authentication failure message.
+ */
 export const loginUser = async (req: Request, res: Response) => {
   try {
     const { password } = req.body;
@@ -84,9 +94,12 @@ export const loginUser = async (req: Request, res: Response) => {
     console.log(error)
     res.status(500).json({ message: 'Internal server error' });
   }
-
 };
 
+/**
+ * Logs out a user by clearing the session cookie.
+ * Clears the 'token' cookie and sends a success response.
+ */
 export const logout = (req:Request,res:Response):void=>{
   try{
     res.clearCookie("token")
@@ -96,7 +109,11 @@ export const logout = (req:Request,res:Response):void=>{
   }
 }
 
-
+/**
+ * Uploads a new assignment for a user.
+ * Validates assignment data, checks user and admin existence, creates a new assignment,
+ * associates it with the user, and responds with success or error messages.
+ */
 export const uploadAssignment = async (req: any, res: Response) => {
   try {
     const validatedData = AssignmentZodSchema.parse(req.body);
@@ -130,7 +147,10 @@ export const uploadAssignment = async (req: any, res: Response) => {
   }
 };
 
-
+/**
+ * Fetches all admin names from the database.
+ * Retrieves all admin documents, extracts their names, and sends the list in the response.
+ */
 export const fetchAdmins = async (req: Request, res: Response) => {
   try{
   const allAdmins =  (await Admin.find({})).map(l=>l.name)

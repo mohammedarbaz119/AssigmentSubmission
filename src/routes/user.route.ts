@@ -1,4 +1,4 @@
-
+// User Routes
 import {Router} from 'express';
 import {
   registerUser,
@@ -17,7 +17,8 @@ UserRouter.post('/register', registerUser);
 
 UserRouter.post('/login',validateUsernameOrEmail, loginUser);
 
-UserRouter.post("/logout",UserAuth,logout)
+// Below 3 routes needs Auth
+UserRouter.post("/logout",UserAuth,logout) 
 UserRouter.post('/upload',UserAuth,uploadAssignment);
 UserRouter.get('/admins', UserAuth,fetchAdmins);
 
