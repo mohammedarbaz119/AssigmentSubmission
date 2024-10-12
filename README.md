@@ -114,8 +114,15 @@ node dist/index.js
    ```bash
    tsc
    ```
+   
+3. **Environment variables**: Create a `.env` file in the root directory with the following variables:
+   ```
+   MONGO_URI=mongodb://localhost:27017/your-db-name
+   SECRET=your_jwt_secret
+   ADMIN_SECRET=scretadmin
+   ```
 
-3. **Start the app**:
+4. **Start the app**:
 
    ```bash
    pnpm start
