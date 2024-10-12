@@ -69,6 +69,7 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
    ```
    MONGO_URI=mongodb://localhost:27017/your-db-name
    SECRET=your_jwt_secret
+   ADMIN_SECRET=scretadmin
    ```
 
 4. **Run the app in development mode**:
