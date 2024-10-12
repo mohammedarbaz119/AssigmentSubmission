@@ -65,7 +65,7 @@ This project is an **Assignment Submission App** built using **Node.js**, **Expr
    pnpm install
    ```
 
-3. **Environment variables**: Create a `.env` file in the root directory with the following variables:
+3. **Environment variables**: Create a `.env` file in the root directory with the following variables and fill in the appropriate Secrets:
    ```
    MONGO_URI=mongodb://localhost:27017/your-db-name
    SECRET=your_jwt_secret
@@ -92,8 +92,14 @@ npm install
 ```bash
 tsc
 ```
+3. **Environment variables**: Create a `.env` file in the root directory with the following variables and fill in the appropriate Secrets:
+   ```
+   MONGO_URI=mongodb://localhost:27017/your-db-name
+   SECRET=your_jwt_secret
+   ADMIN_SECRET=scretadmin
+   ```
 
-3.  **run the Javascript file**
+4.  **run the Javascript file**
 ```bash
 node dist/index.js
 ```
@@ -115,7 +121,7 @@ node dist/index.js
    tsc
    ```
    
-3. **Environment variables**: Create a `.env` file in the root directory with the following variables:
+3. **Environment variables**: Create a `.env` file in the root directory with the following variables and fill in the appropriate Secrets:
    ```
    MONGO_URI=mongodb://localhost:27017/your-db-name
    SECRET=your_jwt_secret
